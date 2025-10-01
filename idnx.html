@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TMBOT</title>
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Theme Colors -->
+  <meta name="theme-color" content="#ff4d2d">
+  <meta name="apple-mobile-web-app-title" content="TMBOT">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<body>
+  <!-- your site content -->
+</body>
+</html>
+
+  <link href="Deth.ico" rel="stylesheet">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Noto Sans SC',sans-serif;}
+    body {background:#fff; color:#333; line-height:1.6;}
+
+    /* Header */
+    header {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:20px 40px; background:#fff;
+      position:fixed; top:0; width:100%; z-index:1000;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    }
+    .logo {font-weight:700; font-size:24px; color:#ff4d2d;}
+    nav {display:flex; gap:20px;}
+    nav a {text-decoration:none; color:#333; font-weight:500; transition:0.3s;}
+    nav a:hover {color:#ff4d2d;}
+
+    .btn-primary {
+      background:#ff4d2d; color:#fff;
+      padding:12px 24px; border-radius:25px;
+      text-decoration:none; transition:0.3s;
+      display:inline-block; font-weight:600;
+      box-shadow:0 4px 10px rgba(255,77,45,0.2);
+    }
+    .btn-primary:hover {
+      background:#e63c1a;
+      transform:translateY(-2px);
+      box-shadow:0 0 15px rgba(255,77,45,0.6), 0 0 30px rgba(255,77,45,0.4);
+    }
+
+    /* Mobile Menu */
+    .menu-toggle {display:none; font-size:24px; cursor:pointer;}
+    @media(max-width:768px){
+      nav {display:none; flex-direction:column; position:absolute; top:70px; right:0; background:#fff; width:200px; box-shadow:0 2px 6px rgba(0,0,0,0.15);}
+      nav.active {display:flex;}
+      .menu-toggle {display:block;}
+    }
+
+    /* Hero */
+    .hero {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:120px 40px 80px; background:#fce9f1; flex-wrap:wrap;
+    }
+    .hero-text {flex:1; min-width:300px;}
+    .hero-text h1 {font-size:40px; font-weight:700; color:#2c2c7a; margin-bottom:20px; animation:fadeInUp 1s ease;}
+    .hero-text p {font-size:18px; margin-bottom:30px;}
+    .hero img {flex:1; width:100%; max-width:400px; animation:fadeIn 1.2s ease;}
+
+    /* Sections */
+    section {padding:80px 40px;}
+    section h2 {font-size:30px; font-weight:700; text-align:center; margin-bottom:20px; color:#2c2c7a;}
+    section p {text-align:center; margin-bottom:40px; font-size:16px;}
+
+    /* Features */
+    .features {display:flex; justify-content:center; flex-wrap:wrap; gap:40px;}
+    .card {flex:1; min-width:250px; max-width:400px; text-align:center; background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); transition:0.3s;}
+    .card:hover {transform:translateY(-5px); box-shadow:0 6px 16px rgba(0,0,0,0.12);}
+    .card img {width:120px; margin-bottom:20px;}
+
+    /* Advantages */
+    .advantages {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+    .advantages .box {padding:20px; background:#fff; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.08); transition:0.3s;}
+    .advantages .box:hover {background:#fdf2f2; transform:translateY(-3px);}
+    .advantages h3 {color:#ff4d2d; margin-bottom:10px;}
+
+    /* Pricing Section with Gradient Background */
+    .pricing-section {
+      background: linear-gradient(180deg, #fff5f7 0%, #fff0f5 100%);
+      padding: 100px 40px;
+      border-radius: 20px;
+    }
+    .pricing-section h2 {
+      font-size: 30px; font-weight: 700; text-align: center;
+      margin-bottom: 40px; color: #2c2c7a;
+    }
+    .pricing {
+      display:flex; justify-content:center; flex-wrap:wrap; gap:30px;
+    }
+    .plan {
+      background:#fff; border-radius:16px;
+      padding:40px 25px; width:320px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+      transition:0.3s; text-align:center; position:relative;
+    }
+    .plan:hover {
+      transform:translateY(-8px);
+      box-shadow:0 12px 28px rgba(0,0,0,0.12);
+    }
+    .plan h3 {font-size:28px; color:#ff4d2d; margin:15px 0;}
+    .plan .subtitle {color:#666; margin-bottom:25px; font-size:15px;}
+    .plan ul {text-align:left; margin:20px 0; padding:0; list-style:none;}
+    .plan ul li {margin:12px 0; padding-left:24px; position:relative;}
+    .plan ul li::before {
+      content:"✔"; position:absolute; left:0; color:#ff4d2d; font-weight:bold;
+    }
+    .plan .badge {
+      display:inline-block;
+      background:#ffe6e9; color:#ff4d2d;
+      padding:6px 14px; border-radius:20px;
+      font-size:14px; font-weight:600;
+      position:absolute; top:-15px; left:50%; transform:translateX(-50%);
+    }
+    .popular {border:2px solid #ff4d2d; transform:scale(1.05);}
+    .popular-badge {background:#ff4d2d; color:#fff;}
+
+    /* Footer */
+    footer {background:#2c2c7a; color:#fff; text-align:center; padding:50px 20px; margin-top:60px;}
+    footer h2 {margin-bottom:20px;}
+
+    /* Animations */
+    @keyframes fadeInUp {0%{opacity:0; transform:translateY(30px);} 100%{opacity:1; transform:translateY(0);}}
+    @keyframes fadeIn {0%{opacity:0;} 100%{opacity:1;}}
+    .reveal {opacity:0; transform:translateY(40px); transition:all 0.8s ease;}
+    .reveal.active {opacity:1; transform:translateY(0);}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">TMBOT</div>
+    <div class="menu-toggle">☰</div>
+    <nav>
+      <a href="#home">主页</a>
+      <a href="#services">产品服务</a>
+      <a href="#pricing">价格方案</a>
+      <a href="#docs">说明书</a>
+    </nav>
+    <a href="https://t.me/Xyo88888" class="btn-primary">联系我们</a>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero" id="home">
+    <div class="hero-text">
+      <h1>管理时间提高效率</h1>
+      <p>打卡机器人不仅可以帮助您记录工作时间，还可以对各种活动进行约束限制，提高团队的工作效率。</p>
+      <a href="https://t.me/Xyo88888" class="btn-primary">联系我们</a>
+    </div>
+    <img src="Deth.ico" alt="Illustration">
+  </div>
+
+  <!-- Features -->
+  <section id="services">
+    <h2>操作简便，事半功倍</h2>
+    <p>满足不同工作性质的需求，操作简单，性能稳定。</p>
+    <div class="features">
+      <div class="card reveal">
+        <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="">
+        <h3>提供解决方案</h3>
+        <p>节省时间，提高团队效率，让打卡机器人帮助您解决问题。</p>
+      </div>
+      <div class="card reveal">
+        <img src="https://cdn-icons-png.flaticon.com/512/1177/1177568.png" alt="">
+        <h3>更多选择</h3>
+        <p>支持多种语言，多版本选择，满足您的不同需求。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="pricing-section">
+    <h2>合理的计价方案</h2>
+    <div class="pricing">
+      <!-- Free Plan -->
+      <div class="plan reveal">
+        <span class="badge">免费版</span>
+        <h3>¥0</h3>
+        <p class="subtitle">永久免费</p>
+        <ul>
+          <li>满足基本打卡功能</li>
+          <li>可自行在群内使用，限制较少</li>
+          <li>适合个人或体验用户</li>
+          <li>不限时间使用</li>
+        </ul>
+        <a href="https://t.me/Xyo88888" class="btn-primary">升级到基础版</a>
+      </div>
+
+      <!-- Basic Plan -->
+      <div class="plan reveal popular">
+        <span class="badge popular-badge">基础版</span>
+        <h3>$70 <span>/ 半年</span></h3>
+        <p class="subtitle">小型团队的轻量级管理</p>
+        <ul>
+          <li>每日打卡、统计表生成</li>
+          <li>支持定制时间段打卡</li>
+          <li>自动提醒未打卡成员</li>
+          <li>数据保存半年可查</li>
+          <li>适合 5-50 人团队</li>
+        </ul>
+        <a href="https://t.me/Xyo88888" class="btn-primary">联系订购</a>
+      </div>
+
+      <!-- Advanced Plan -->
+      <div class="plan reveal">
+        <span class="badge">高级版</span>
+        <h3>$120 <span>/ 半年</span></h3>
+        <p class="subtitle">大型团队的高效管理</p>
+        <ul>
+          <li>包含基础版所有功能</li>
+          <li>高级统计报表导出 (Excel/PDF)</li>
+          <li>支持多群、多部门打卡</li>
+          <li>可自定义提醒内容</li>
+          <li>数据保存 2 年</li>
+          <li>适合 50+ 人团队</li>
+        </ul>
+        <a href="https://t.me/Xyo88888" class="btn-primary">联系订购</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <h2>请将您的需求告诉我</h2>
+    <p>通过联系客服，帮助您找到最合适的解决方案。</p>
+    <a href="https://t.me/Xyo88888" class="btn-primary">开始沟通</a>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile Menu Toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    toggle.addEventListener('click', () => nav.classList.toggle('active'));
+
+    // Scroll Reveal
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.reveal').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
